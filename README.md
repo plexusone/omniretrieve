@@ -1,8 +1,31 @@
 # OmniRetrieve
 
-[![CI](https://github.com/agentplexus/omniretrieve/actions/workflows/ci.yaml/badge.svg)](https://github.com/agentplexus/omniretrieve/actions/workflows/ci.yaml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/agentplexus/omniretrieve.svg)](https://pkg.go.dev/github.com/agentplexus/omniretrieve)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# OmniSerp Multi-Search Client and MCP Server
+
+[![Go CI][go-ci-svg]][go-ci-url]
+[![Go Lint][go-lint-svg]][go-lint-url]
+[![Go SAST][go-sast-svg]][go-sast-url]
+[![Go Report Card][goreport-svg]][goreport-url]
+[![Docs][docs-godoc-svg]][docs-godoc-url]
+[![Visualization][viz-svg]][viz-url]
+[![License][license-svg]][license-url]
+
+ [go-ci-svg]: https://github.com/plexusone/omniretrieve/actions/workflows/go-ci.yaml/badge.svg?branch=main
+ [go-ci-url]: https://github.com/plexusone/omniretrieve/actions/workflows/go-ci.yaml
+ [go-lint-svg]: https://github.com/plexusone/omniretrieve/actions/workflows/go-lint.yaml/badge.svg?branch=main
+ [go-lint-url]: https://github.com/plexusone/omniretrieve/actions/workflows/go-lint.yaml
+ [go-sast-svg]: https://github.com/plexusone/omniretrieve/actions/workflows/go-sast-codeql.yaml/badge.svg?branch=main
+ [go-sast-url]: https://github.com/plexusone/omniretrieve/actions/workflows/go-sast-codeql.yaml
+ [goreport-svg]: https://goreportcard.com/badge/github.com/plexusone/omniretrieve
+ [goreport-url]: https://goreportcard.com/report/github.com/plexusone/omniretrieve
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/omniretrieve
+ [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/omniretrieve
+ [viz-svg]: https://img.shields.io/badge/visualizaton-Go-blue.svg
+ [viz-url]: https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=plexusone%2Fomniretrieve
+ [loc-svg]: https://tokei.rs/b1/github/plexusone/omniretrieve
+ [repo-url]: https://github.com/plexusone/omniretrieve
+ [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
+ [license-url]: https://github.com/plexusone/omniretrieve/blob/master/LICENSE
 
 OmniRetrieve is a unified retrieval library for Go that supports Vector RAG, Graph RAG, and Hybrid retrieval strategies. It provides a consistent interface for building retrieval-augmented generation (RAG) systems with pluggable backends.
 
