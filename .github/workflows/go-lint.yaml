@@ -1,53 +1,27 @@
-name: lint
-on: [push, pull_request]
+name: Go Lint
+permissions:
+  contents: read
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
+      - '.golangci.yml'
+      - '.github/workflows/go-lint.yaml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
+      - '.golangci.yml'
+      - '.github/workflows/go-lint.yaml'
+  workflow_dispatch:
 
 jobs:
-  # Discover all Go modules in the repository
-  discover-modules:
-    runs-on: ubuntu-latest
-    outputs:
-      modules: ${{ steps.find-modules.outputs.modules }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-      - name: Find Go modules
-        id: find-modules
-        run: |
-          # Find all directories containing go.mod
-          modules=$(find . -name 'go.mod' -exec dirname {} \; | sort | jq -R -s -c 'split("\n") | map(select(length > 0))')
-          echo "modules=$modules" >> $GITHUB_OUTPUT
-          echo "Found modules: $modules"
-
   lint:
-    needs: discover-modules
-    strategy:
-      fail-fast: false
-      matrix:
-        module: ${{ fromJson(needs.discover-modules.outputs.modules) }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - name: Install Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: '1.23'
-      - name: golangci-lint ${{ matrix.module }}
-        uses: golangci/golangci-lint-action@v9
-        with:
-          version: latest
-          working-directory: ${{ matrix.module }}
-          args: --timeout 3m --max-same-issues 0 --max-issues-per-linter 0 --verbose
-
-  # Ensure all lint checks passed
-  lint-summary:
-    needs: lint
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Check lint results
-        run: |
-          if [ "${{ needs.lint.result }}" != "success" ]; then
-            echo "Some lint checks failed"
-            exit 1
-          fi
-          echo "All lint checks passed"
+    uses: plexusone/.github/.github/workflows/go-lint.yaml@main

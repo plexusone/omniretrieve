@@ -1,60 +1,25 @@
-name: CI
+name: Go CI
+permissions:
+  contents: read
 on:
   push:
     branches:
       - main
+    paths:
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
+      - '.github/workflows/go-ci.yaml'
   pull_request:
     branches:
       - main
+    paths:
+      - '**.go'
+      - 'go.mod'
+      - 'go.sum'
+      - '.github/workflows/go-ci.yaml'
   workflow_dispatch:
 
 jobs:
-  # Discover all Go modules in the repository
-  discover-modules:
-    runs-on: ubuntu-latest
-    outputs:
-      modules: ${{ steps.find-modules.outputs.modules }}
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v6
-      - name: Find Go modules
-        id: find-modules
-        run: |
-          # Find all directories containing go.mod
-          modules=$(find . -name 'go.mod' -exec dirname {} \; | sort | jq -R -s -c 'split("\n") | map(select(length > 0))')
-          echo "modules=$modules" >> $GITHUB_OUTPUT
-          echo "Found modules: $modules"
-
-  test:
-    needs: discover-modules
-    strategy:
-      fail-fast: false
-      matrix:
-        go-version: [1.25.x, 1.24.x]
-        platform: [ubuntu-latest, macos-latest, windows-latest]
-        module: ${{ fromJson(needs.discover-modules.outputs.modules) }}
-    runs-on: ${{ matrix.platform }}
-    steps:
-      - name: Install Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: ${{ matrix.go-version }}
-      - name: Checkout code
-        uses: actions/checkout@v6
-      - name: Run tests for ${{ matrix.module }}
-        working-directory: ${{ matrix.module }}
-        run: go test -v -covermode=count ./...
-
-  # Ensure all tests passed
-  test-summary:
-    needs: test
-    runs-on: ubuntu-latest
-    if: always()
-    steps:
-      - name: Check test results
-        run: |
-          if [ "${{ needs.test.result }}" != "success" ]; then
-            echo "Some tests failed"
-            exit 1
-          fi
-          echo "All tests passed"
+  ci:
+    uses: plexusone/.github/.github/workflows/go-ci.yaml@main
