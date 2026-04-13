@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/grokify/oscompat/id"
 )
 
 // SpanType identifies the type of operation being traced.
@@ -328,11 +329,11 @@ func (o *Observer) exportTrace(ctx context.Context, traceID string) {
 	delete(o.traces, traceID)
 }
 
-// generateID generates a unique span ID.
+// generateID generates a unique span ID using crypto/rand.
+// This is cross-platform safe, unlike time-based generation which fails
+// on Windows due to coarse clock resolution (~15.6ms).
 func generateID() string {
-	h := sha256.New()
-	h.Write([]byte(time.Now().String()))
-	return hex.EncodeToString(h.Sum(nil))[:16]
+	return id.Generate16()
 }
 
 // hashQuery creates a hash of the query text for logging.

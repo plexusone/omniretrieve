@@ -1,3 +1,5 @@
 module github.com/agentplexus/omniretrieve
 
-go 1.24.11
+go 1.25.5
+
+require github.com/grokify/oscompat v0.1.0
