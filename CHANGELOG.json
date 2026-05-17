@@ -1,7 +1,7 @@
 {
   "irVersion": "1.0",
   "project": "omniretrieve",
-  "repository": "github.com/plexusone/omniretrieve",
+  "repository": "https://github.com/plexusone/omniretrieve",
   "versioning": "semver",
   "commitConvention": "conventional",
   "releases": [
@@ -12,17 +12,21 @@
         { "description": "Module renamed from `github.com/agentplexus/omniretrieve` to `github.com/plexusone/omniretrieve`" }
       ],
       "changed": [
-        { "description": "Rename module path from `github.com/agentplexus/omniretrieve` to `github.com/plexusone/omniretrieve`", "commit": "ee645c4" }
+        { "description": "Rename module path from `github.com/agentplexus/omniretrieve` to `github.com/plexusone/omniretrieve`", "commit": "ee645c4" },
+        { "description": "Update pgvector provider module path to plexusone", "commit": "b3e5fc6" }
       ],
       "fixed": [
-        { "description": "`generateID()` moved to OS-agnostic ID generation using `oscompat`", "commit": "d8fe2a0" }
+        { "description": "`generateID()` moved to OS-agnostic ID generation using `oscompat`", "commit": "d8fe2a0" },
+        { "description": "Fix gofmt formatting in observe package", "commit": "fb7b318" }
       ],
       "documentation": [
         { "description": "Update README title", "commit": "562ae76" },
-        { "description": "Update README shields", "commit": "96bb29d" }
+        { "description": "Update README shields", "commit": "96bb29d" },
+        { "description": "Update module paths in README and TRD", "commit": "7613ed4" }
       ],
       "dependencies": [
-        { "description": "Bump `github.com/grokify/oscompat` from 0.1.0 to 0.3.0", "commit": "6f29ae3" }
+        { "description": "Bump `github.com/grokify/oscompat` from 0.1.0 to 0.3.0", "commit": "6f29ae3" },
+        { "description": "Update pgvector provider dependencies", "commit": "4dc54fc" }
       ],
       "internal": [
         { "description": "Update CI workflows to shared workflow filenames", "commit": "b951726" },
@@ -37,27 +41,22 @@
         { "description": "Support for Vector RAG, Graph RAG, and Hybrid retrieval strategies" }
       ],
       "added": [
-        { "description": "Core retrieval interfaces (`Retriever`, `Query`, `Result`, `ContextItem`)" },
-        { "description": "Vector retrieval with `Index`, `BatchIndex`, and `IndexManager` interfaces" },
-        { "description": "Graph retrieval with `KnowledgeGraph` and `GraphManager` interfaces" },
-        { "description": "Hybrid retrieval with configurable policies (`Parallel`, `VectorThenGraph`, `GraphThenVector`)" },
-        { "description": "Observability support with span tracing (Phoenix, Opik, Langfuse compatible)" },
-        { "description": "Reranking support (`CrossEncoder`, `Heuristic`, `Chain`)" },
-        { "description": "In-memory implementations for testing (`VectorIndex`, `KnowledgeGraph`, `HashEmbedder`)" },
-        { "description": "pgvector provider with HNSW/IVFFlat index types" },
-        { "description": "Batch operations via COPY and multi-row INSERT" },
-        { "description": "JSONB metadata filtering support" }
+        { "description": "Core retrieval interfaces (`Retriever`, `Query`, `Result`, `ContextItem`)", "commit": "28e9a14" },
+        { "description": "Vector retrieval with `Index`, `BatchIndex`, and `IndexManager` interfaces", "commit": "2b9ecd3" },
+        { "description": "Graph retrieval with `KnowledgeGraph` and `GraphManager` interfaces", "commit": "9282af6" },
+        { "description": "Hybrid retrieval with configurable policies (`Parallel`, `VectorThenGraph`, `GraphThenVector`)", "commit": "814a065" },
+        { "description": "Observability support with span tracing (Phoenix, Opik, Langfuse compatible)", "commit": "6378c60" },
+        { "description": "Reranking support (`CrossEncoder`, `Heuristic`, `Chain`)", "commit": "7ad8afd" },
+        { "description": "In-memory implementations for testing (`VectorIndex`, `KnowledgeGraph`, `HashEmbedder`)", "commit": "5be3a79" },
+        { "description": "pgvector provider with HNSW/IVFFlat index types, batch operations, and JSONB metadata filtering", "commit": "43481c0" }
       ],
       "documentation": [
-        { "description": "Add README with quick start guide and examples" },
-        { "description": "Add PRD (Product Requirements Document)" },
-        { "description": "Add TRD (Technical Requirements Document)" }
+        { "description": "Add README with quick start guide and examples", "commit": "c39ff47" },
+        { "description": "Add PRD (Product Requirements Document)", "commit": "c39ff47" },
+        { "description": "Add TRD (Technical Requirements Document)", "commit": "c39ff47" }
       ],
       "internal": [
-        { "description": "Add GitHub Actions CI for multi-module testing" },
-        { "description": "Add GitHub Actions lint workflow with golangci-lint" },
-        { "description": "Add CodeQL security analysis" },
-        { "description": "Add golangci-lint configuration" }
+        { "description": "Add GitHub Actions CI, lint workflow, and CodeQL security analysis", "commit": "1ebbd76" }
       ]
     }
   ]
