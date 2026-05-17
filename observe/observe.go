@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/plexusone/omniretrieve/retrieve"
 	"github.com/grokify/oscompat/id"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 // SpanType identifies the type of operation being traced.
