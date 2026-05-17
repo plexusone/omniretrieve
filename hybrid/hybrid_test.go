@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/agentplexus/omniretrieve/graph"
-	"github.com/agentplexus/omniretrieve/hybrid"
-	"github.com/agentplexus/omniretrieve/memory"
-	"github.com/agentplexus/omniretrieve/retrieve"
-	"github.com/agentplexus/omniretrieve/vector"
+	"github.com/plexusone/omniretrieve/graph"
+	"github.com/plexusone/omniretrieve/hybrid"
+	"github.com/plexusone/omniretrieve/memory"
+	"github.com/plexusone/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/vector"
 )
 
 func setupTestRetrievers(t *testing.T) (retrieve.Retriever, retrieve.Retriever) {

@@ -1,4 +1,4 @@
-module github.com/agentplexus/omniretrieve
+module github.com/plexusone/omniretrieve
 
 go 1.25.5
 

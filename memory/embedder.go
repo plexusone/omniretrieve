@@ -4,7 +4,7 @@ import (
 	"context"
 	"hash/fnv"
 
-	"github.com/agentplexus/omniretrieve/vector"
+	"github.com/plexusone/omniretrieve/vector"
 )
 
 // HashEmbedder creates deterministic embeddings using hashing.

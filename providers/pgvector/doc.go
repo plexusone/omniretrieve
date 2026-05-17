@@ -14,7 +14,7 @@
 //	import (
 //		"database/sql"
 //		_ "github.com/lib/pq"
-//		"github.com/agentplexus/omniretrieve/providers/pgvector"
+//		"github.com/plexusone/omniretrieve/providers/pgvector"
 //	)
 //
 //	// Connect to PostgreSQL

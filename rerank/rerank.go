@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 // CrossEncoderScorer scores query-document pairs using a cross-encoder model.

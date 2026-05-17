@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/agentplexus/omniretrieve/providers/pgvector"
-	"github.com/agentplexus/omniretrieve/vector"
+	"github.com/plexusone/omniretrieve/providers/pgvector"
+	"github.com/plexusone/omniretrieve/vector"
 	_ "github.com/lib/pq"
 )
 

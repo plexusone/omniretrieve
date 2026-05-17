@@ -5,8 +5,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/agentplexus/omniretrieve/observe"
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/observe"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 // mockExporter captures exported spans for testing.

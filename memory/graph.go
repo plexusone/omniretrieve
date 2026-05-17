@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/agentplexus/omniretrieve/graph"
+	"github.com/plexusone/omniretrieve/graph"
 )
 
 // KnowledgeGraph is an in-memory knowledge graph.

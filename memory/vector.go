@@ -7,7 +7,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/agentplexus/omniretrieve/vector"
+	"github.com/plexusone/omniretrieve/vector"
 )
 
 // VectorIndex is an in-memory vector index using brute-force search.

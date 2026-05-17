@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/agentplexus/omniretrieve/rerank"
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/rerank"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 func createTestItems() []retrieve.ContextItem {

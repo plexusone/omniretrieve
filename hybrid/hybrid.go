@@ -6,7 +6,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 // Policy defines how to combine vector and graph retrieval.

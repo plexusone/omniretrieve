@@ -5,7 +5,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 // Node represents a node in the vector index.

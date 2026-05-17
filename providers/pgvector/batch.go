@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/agentplexus/omniretrieve/vector"
+	"github.com/plexusone/omniretrieve/vector"
 	"github.com/lib/pq"
 )
 

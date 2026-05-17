@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/retrieve"
 	"github.com/grokify/oscompat/id"
 )
 

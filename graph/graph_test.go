@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/agentplexus/omniretrieve/graph"
-	"github.com/agentplexus/omniretrieve/memory"
-	"github.com/agentplexus/omniretrieve/retrieve"
+	"github.com/plexusone/omniretrieve/graph"
+	"github.com/plexusone/omniretrieve/memory"
+	"github.com/plexusone/omniretrieve/retrieve"
 )
 
 func setupTestGraph(t *testing.T) *memory.KnowledgeGraph {
