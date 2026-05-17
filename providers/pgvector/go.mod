@@ -3,7 +3,7 @@ module github.com/plexusone/omniretrieve/providers/pgvector
 go 1.25.5
 
 require (
-	github.com/lib/pq v1.10.9
+	github.com/lib/pq v1.12.3
 	github.com/plexusone/omniretrieve v0.2.0
 )
 
