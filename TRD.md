@@ -355,7 +355,7 @@ type Exporter interface {
 ### pgvector Provider
 
 - `github.com/lib/pq` - PostgreSQL driver
-- `github.com/agentplexus/omniretrieve` - Core interfaces
+- `github.com/plexusone/omniretrieve` - Core interfaces
 
 ## Deployment
 

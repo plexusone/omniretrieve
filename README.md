@@ -39,13 +39,13 @@ OmniRetrieve is a unified retrieval library for Go that supports Vector RAG, Gra
 ## Installation
 
 ```bash
-go get github.com/agentplexus/omniretrieve
+go get github.com/plexusone/omniretrieve
 ```
 
 For pgvector support:
 
 ```bash
-go get github.com/agentplexus/omniretrieve/providers/pgvector
+go get github.com/plexusone/omniretrieve/providers/pgvector
 ```
 
 ## Quick Start
@@ -59,8 +59,8 @@ import (
     "context"
     "log"
 
-    "github.com/agentplexus/omniretrieve/memory"
-    "github.com/agentplexus/omniretrieve/vector"
+    "github.com/plexusone/omniretrieve/memory"
+    "github.com/plexusone/omniretrieve/vector"
 )
 
 func main() {
@@ -112,10 +112,10 @@ package main
 import (
     "context"
 
-    "github.com/agentplexus/omniretrieve/hybrid"
-    "github.com/agentplexus/omniretrieve/memory"
-    "github.com/agentplexus/omniretrieve/vector"
-    "github.com/agentplexus/omniretrieve/graph"
+    "github.com/plexusone/omniretrieve/hybrid"
+    "github.com/plexusone/omniretrieve/memory"
+    "github.com/plexusone/omniretrieve/vector"
+    "github.com/plexusone/omniretrieve/graph"
 )
 
 func main() {
@@ -161,8 +161,8 @@ import (
     "log"
 
     _ "github.com/lib/pq"
-    "github.com/agentplexus/omniretrieve/providers/pgvector"
-    "github.com/agentplexus/omniretrieve/vector"
+    "github.com/plexusone/omniretrieve/providers/pgvector"
+    "github.com/plexusone/omniretrieve/vector"
 )
 
 func main() {
@@ -225,7 +225,7 @@ OmniRetrieve includes built-in observability support compatible with:
 - [Langfuse](https://langfuse.com/) - LLM analytics
 
 ```go
-import "github.com/agentplexus/omniretrieve/observe"
+import "github.com/plexusone/omniretrieve/observe"
 
 // Create observer with exporters
 obs := observe.NewObserver(
