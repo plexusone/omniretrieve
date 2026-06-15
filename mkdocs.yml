@@ -1,0 +1,70 @@
+site_name: OmniRetrieve
+site_description: Vector search, BM25, and semantic memory for Go
+site_url: https://plexusone.github.io/omniretrieve
+repo_url: https://github.com/plexusone/omniretrieve
+repo_name: plexusone/omniretrieve
+
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  palette:
+    # Dark mode first (PlexusOne default)
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - https://plexusone.dev/css/plexusone-mkdocs.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Concepts:
+      - Overview: concepts/overview.md
+      - Vector Search: concepts/vector.md
+      - BM25 Search: concepts/bm25.md
+      - Hybrid Search: concepts/hybrid.md
+      - Memory Manager: concepts/memory.md
+      - Reranking: concepts/rerank.md
+  - Providers:
+      - pgvector: providers/pgvector.md
+  - API Reference: api/index.md
+  - Releases:
+      - v0.2.0: releases/v0.2.0.md
+      - v0.1.0: releases/v0.1.0.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/plexusone/omniretrieve
