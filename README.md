@@ -29,14 +29,14 @@ OmniRetrieve is a unified retrieval library for Go that supports Vector RAG, Gra
 
 ## Features
 
-- **Vector Retrieval** - Semantic similarity search using embeddings
-- **BM25 Search** - Keyword-based text search with configurable parameters
-- **Graph Retrieval** - Relationship-aware traversal for structured knowledge
-- **Hybrid Retrieval** - Combine vector and graph strategies with configurable policies
-- **Memory Manager** - Collection-based document storage with semantic search
-- **Observability** - Built-in tracing compatible with Phoenix, Opik, and Langfuse
-- **Reranking** - Cross-encoder and heuristic reranking support
-- **Pluggable Backends** - Use pgvector, Pinecone, Neo4j, or implement your own
+- 🎯 **Vector Retrieval** - Semantic similarity search using embeddings
+- 📝 **BM25 Search** - Keyword-based text search with configurable parameters
+- 🕸️ **Graph Retrieval** - Relationship-aware traversal for structured knowledge
+- ⚡ **Hybrid Retrieval** - Combine vector and graph strategies with configurable policies
+- 🗄️ **Memory Manager** - Collection-based document storage with semantic search
+- 📊 **Observability** - Built-in tracing compatible with Phoenix, Opik, and Langfuse
+- 📈 **Reranking** - Cross-encoder and heuristic reranking support
+- 🔌 **Pluggable Backends** - Use pgvector, Pinecone, Neo4j, or implement your own
 
 ## Installation
 
