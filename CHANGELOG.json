@@ -6,6 +6,29 @@
   "commitConvention": "conventional",
   "releases": [
     {
+      "version": "0.3.0",
+      "date": "2026-06-14",
+      "highlights": [
+        { "description": "BM25 text search - keyword-based search with configurable parameters" },
+        { "description": "Memory manager - collection-based document storage with semantic search" },
+        { "description": "MkDocs documentation site with PlexusOne theming" }
+      ],
+      "added": [
+        { "description": "Add BM25 text search implementation with configurable k1/b parameters", "commit": "560b84a" },
+        { "description": "Add memory manager for collection-based document storage", "commit": "f953036" }
+      ],
+      "testing": [
+        { "description": "Add comprehensive BM25 index tests", "commit": "2111e70" }
+      ],
+      "documentation": [
+        { "description": "Add MkDocs documentation site with Material theme", "commit": "b8e8c7d" },
+        { "description": "Add PlexusOne unified navigation to MkDocs", "commit": "dfe430c" }
+      ],
+      "dependencies": [
+        { "description": "Update `github.com/grokify/oscompat` from 0.3.0 to 0.4.0", "commit": "c27de93" }
+      ]
+    },
+    {
       "version": "0.2.0",
       "date": "2026-05-17",
       "highlights": [
