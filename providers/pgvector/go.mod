@@ -4,7 +4,7 @@ go 1.25.5
 
 require (
 	github.com/lib/pq v1.12.3
-	github.com/plexusone/omniretrieve v0.2.0
+	github.com/plexusone/omniretrieve v0.3.0
 )
 
 // For local development within the monorepo.
