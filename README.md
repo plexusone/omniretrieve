@@ -17,7 +17,7 @@
  [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/plexusone/omniretrieve
  [docs-godoc-url]: https://pkg.go.dev/github.com/plexusone/omniretrieve
  [docs-mkdoc-svg]: https://img.shields.io/badge/Go-dev%20guide-blue.svg
- [docs-mkdoc-url]: https://plexusone.github.io/omniretrieve
+ [docs-mkdoc-url]: https://plexusone.dev/omniretrieve
  [viz-svg]: https://img.shields.io/badge/Go-visualizaton-blue.svg
  [viz-url]: https://mango-dune-07a8b7110.1.azurestaticapps.net/?repo=plexusone%2Fomniretrieve
  [loc-svg]: https://tokei.rs/b1/github/plexusone/omniretrieve
