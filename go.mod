@@ -2,4 +2,4 @@ module github.com/plexusone/omniretrieve
 
 go 1.25.5
 
-require github.com/grokify/oscompat v0.7.0
+require github.com/grokify/oscompat v0.9.0
